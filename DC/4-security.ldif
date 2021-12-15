@@ -1,0 +1,11 @@
+dn: cn=pxor,ou=security,dc=pxor,dc=net
+cn: PXOR
+description: All Users Security Group
+objectClass: groupOfNames
+member: uid=ken.liou,ou=security,dc=pxor,dc=net
+
+dn: cn=Admin,ou=security,dc=pxor,dc=net
+cn: Admin
+description: Admin Security Group
+objectClass: groupOfNames
+member: uid=ken.liou,ou=security,dc=pxor,dc=net

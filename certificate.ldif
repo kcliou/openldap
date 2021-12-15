@@ -1,0 +1,20 @@
+dn: cn=config
+changetype: modify
+add: olcTLSCACertificatePath
+olcTLSCACertificatePath: /etc/openldap/certs
+-
+add: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/openldap/certs/ca_chain.pem
+-
+add: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/openldap/certs/ldap.key
+-
+add: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/openldap/certs/ldap.crt
+-
+add: olcTLSCipherSuite
+olcTLSCipherSuite: HIGH:MEDIUM:+SSLv2
+-
+add: olcTLSVerifyClient
+olcTLSVerifyClient: allow
+

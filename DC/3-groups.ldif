@@ -1,0 +1,11 @@
+dn: cn=pxor,ou=group,dc=pxor,dc=net
+cn: PXOR
+description: All Users.
+objectClass: posixGroup
+gidNumber: 10001
+
+dn: cn=Admin,ou=group,dc=pxor,dc=net
+cn: Admin
+description: Sudo User group
+objectClass: posixGroup
+gidNumber: 10000

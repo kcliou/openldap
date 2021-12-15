@@ -1,0 +1,9 @@
+#
+# after SSL enable 
+# ldapmodify -x -D cn=config -W -H ldapi:/// -f logLevel.ldif
+#
+dn: cn=config
+changetype: modify
+replace: olcLogLevel
+olcLogLevel: stats sync
+# olcLogLevel: 0

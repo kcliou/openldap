@@ -1,0 +1,34 @@
+#
+# ldapadd -a -x -D cn=admin,dc=pxor,dc=net -W -H ldap://ldap-02.pxor.net -f 2-OU.ldif
+#
+dn: dc=pxor,dc=net
+objectClass: top
+objectClass: dcObject
+objectclass: organization
+o: Async, Inc.
+dc: pxor
+
+dn: ou=user,dc=pxor,dc=net
+objectClass: organizationalUnit
+objectClass: top
+ou: user
+
+dn: ou=group,dc=pxor,dc=net
+objectClass: organizationalUnit
+objectClass: top
+ou: group
+
+dn: ou=security,dc=pxor,dc=net
+objectClass: organizationalUnit
+objectClass: top
+ou: security
+
+dn: ou=workstation,dc=pxor,dc=net
+objectClass: organizationalUnit
+objectClass: top
+ou: workstation
+
+dn: ou=server,dc=pxor,dc=net
+objectClass: organizationalUnit
+objectClass: top
+ou: server

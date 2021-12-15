@@ -1,0 +1,13 @@
+dn: olcDatabase={2}mdb,cn=config
+changetype: modify
+add: olcDbIndex
+olcDbIndex: uid eq
+-
+add: olcDbIndex
+olcDbIndex: uidNumber eq
+-
+add: olcDbIndex
+olcDbIndex: uniqueMember eq
+-
+add: olcDbIndex
+olcDbIndex: gidNumber eq

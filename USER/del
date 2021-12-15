@@ -1,0 +1,2 @@
+# ldapdelete -x -D cn=admin,dc=async,dc=local -W -H ldaps://ldap-02.async.local/ -f del
+uid=ken.liou,ou=user,dc=async,dc=local

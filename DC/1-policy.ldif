@@ -1,0 +1,26 @@
+#
+# ldapadd -a -x -D cn=admin,dc=pxor,dc=net -W -H ldap://ldap-02.pxor.net -f {thisfile}
+# 
+dn: ou=policies,dc=pxor,dc=net
+ou: policies
+objectClass: organizationalUnit
+
+dn: cn=defaultPolicy,ou=policies,dc=pxor,dc=net
+objectClass: pwdPolicy
+objectClass: Person
+objectClass: top
+cn: defaultPolicy
+pwdMinAge: 0
+pwdMaxAge: 0
+pwdInHistory: 5
+pwdCheckQuality: 0
+pwdMinLength: 8
+pwdExpireWarning: 0
+pwdGraceAuthNLimit: 0
+pwdLockout: TRUE
+pwdLockoutDuration: 0
+pwdMaxFailure: 3
+pwdAllowUserChange: TRUE
+pwdFailureCountInterval: 0
+pwdMustChange: FALSE
+pwdSafeModify: FALSE

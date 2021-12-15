@@ -1,0 +1,25 @@
+# 
+# ldapmodify -x -D cn=config -W -H ldaps://ldap2.lab.byton.io/ -f filename.ldif
+#
+dn: olcDatabase={1}monitor,cn=config
+changetype: modify
+replace: olcAccess
+olcAccess: {0}to * by dn.base="gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth"
+  read by dn.base="cn=admin,dc=pxor,dc=net" read by * none
+
+dn: olcDatabase={2}mdb,cn=config
+changetype: modify
+replace: olcSuffix
+olcSuffix: dc=pxor,dc=net
+-
+replace: olcRootDN
+olcRootDN: cn=admin,dc=pxor,dc=net
+-
+replace: olcRootPW
+olcRootPW: {SSHA}27O2qP6/EcsnIDvug16SSpXjIuT0OIiN
+-
+add: olcAccess
+olcAccess: {0}to attrs=userPassword,shadowLastChange by
+  dn="cn=admin,dc=pxor,dc=net" write by anonymous auth by self write by * none
+olcAccess: {1}to dn.base="" by * read
+olcAccess: {2}to * by dn="cn=admin,dc=pxor,dc=net" write by * read

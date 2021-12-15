@@ -1,0 +1,5 @@
+#!/bin/bash
+
+file=$1
+cred=fff391348795285a6c6cd8dc065030de
+ldapadd -a -x -D cn=admin,dc=pxor,dc=net -w $cred -H ldap://ldap-02.pxor.net -f $file
